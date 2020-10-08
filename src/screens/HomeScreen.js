@@ -6,7 +6,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
   <View>
-    <Text style={styles.text}>Hello, World!</Text>
+    <Text style={styles.text}>Home Screen</Text>
     <Button
       title="Go to NewScreen"
       onPress={() => navigation.navigate('New')}
@@ -18,13 +18,17 @@ const HomeScreen = ({ navigation }) => {
       title="Go to CardScreen"
       onPress={() => navigation.navigate('Card')}
     />
+    <Button
+      title="Go to CounterScreen"
+      onPress={() => navigation.navigate('Counter')}
+    />
   </View>
   );
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30
+    fontSize: 26
   }
 });
 
