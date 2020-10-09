@@ -7,7 +7,7 @@ const ColorScreen = () => {
 
   return (
     <View>
-      <Text style={styles.textStyle1}>Color Generator</Text>
+      <Text style={styles.textStyle1}>Color Square Generator</Text>
       <Button
         title="Add Color"
         onPress={() => setColors([...colors, randomRgb()])}
@@ -16,6 +16,10 @@ const ColorScreen = () => {
         keyExtractor={item => item}
         data={colors}
         renderItem={({ item }) => <Square color={item} size={80} />}
+      />
+      <Button
+        title="Clear"
+        onPress={() => setColors([])}
       />
     </View>
   );

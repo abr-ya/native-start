@@ -21,7 +21,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "First React Native App"
+      title: "Слабоумие и отвага!"
     }
   }
 );

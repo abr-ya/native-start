@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Text, StyleSheet, View, Button, FlatList } from "react-native";
 import ColorCounter from '../components/ColorCounter';
+import Square from "../components/Square";
 
 const ColorScreen2 = () => {
   const [colors, setColors] = useState({
@@ -10,27 +11,22 @@ const ColorScreen2 = () => {
   });
 
   const setColor = (col, value) => {
-    setColors({...colors, col: value})
+    setColors({...colors, [col]: value})
   };
+
+  const {red: r, green: g, blue: b} = colors;
 
   return (
     <View>
       <Text style={styles.textStyle1}>Color Generator 2</Text>
-      <ColorCounter title="red" />
-      <ColorCounter title="green" />
-      <ColorCounter title="blue" />
+      <ColorCounter title="red" value={colors.red} setColor={setColor} />
+      <ColorCounter title="green" value={colors.green} setColor={setColor} />
+      <ColorCounter title="blue" value={colors.blue} setColor={setColor} />
+
+      <Square color={`rgb(${r}, ${g}, ${b})`} size={80} />
     </View>
   );
-  
 };
-
-const randomRgb = () => {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
-
-  return `rgb(${red}, ${green}, ${blue})`
-}
 
 const styles = StyleSheet.create({
   textStyle1: {
