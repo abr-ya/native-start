@@ -2,8 +2,12 @@ import React from "react";
 import { Text, StyleSheet, View, Button } from "react-native";
 
 const ColorCounter = ({ title, value, setColor }) => {
-  const increaseColor = () => {setColor(title, value + 10)};
-  const decreaseColor = () => {setColor(title, value - 10)};
+  const increaseColor = () => {
+    if (value !== 255) setColor(title, (value > 245 ? 255 : value + 10));
+  };
+  const decreaseColor = () => {
+    if (value !== 0) setColor(title, (value > 10 ? value - 10 : 0));
+  };
 
   return (
     <View>
