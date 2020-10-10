@@ -23,12 +23,16 @@ const HomeScreen = ({ navigation }) => {
       onPress={() => navigation.navigate('Counter')}
     />
     <Button
-      title="Go to ColorScreen"
+      title="Go to Random Color Generator"
       onPress={() => navigation.navigate('Color')}
     />
     <Button
-      title="Go to ColorScreen 2"
+      title="Go to Control Color Generator"
       onPress={() => navigation.navigate('Color2')}
+    />
+        <Button
+      title="Go to Control Color Generator - Reducer Version"
+      onPress={() => navigation.navigate('Color3')}
     />
   </View>
   );

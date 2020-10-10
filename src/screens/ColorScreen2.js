@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, StyleSheet, View, Button, FlatList } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 import ColorCounter from '../components/ColorCounter';
 import Square from "../components/Square";
 
@@ -18,7 +18,7 @@ const ColorScreen2 = () => {
 
   return (
     <View>
-      <Text style={styles.textStyle1}>Color Generator 2</Text>
+      <Text style={styles.textStyle1}>Control Color Generator</Text>
       <ColorCounter title="red" value={colors.red} setColor={setColor} />
       <ColorCounter title="green" value={colors.green} setColor={setColor} />
       <ColorCounter title="blue" value={colors.blue} setColor={setColor} />
