@@ -5,6 +5,7 @@ import NewScreen from "./src/screens/NewScreen";
 import ListScreen from "./src/screens/ListScreen";
 import CardScreen from "./src/screens/CardScreen";
 import CounterScreen from './src/screens/CounterScreen';
+import CounterScreenReducer from './src/screens/CounterScreenReducer';
 import ColorScreen from './src/screens/ColorScreen';
 import ColorScreen2 from './src/screens/ColorScreen2';
 import ColorScreen3 from './src/screens/ColorScreen3';
@@ -16,6 +17,7 @@ const navigator = createStackNavigator(
     List: ListScreen,
     Card: CardScreen,
     Counter: CounterScreen,
+    CounterR: CounterScreenReducer,
     Color: ColorScreen,
     Color2: ColorScreen2,
     Color3: ColorScreen3,

@@ -23,6 +23,10 @@ const HomeScreen = ({ navigation }) => {
       onPress={() => navigation.navigate('Counter')}
     />
     <Button
+      title="Go to CounterScreen with Reducer"
+      onPress={() => navigation.navigate('CounterR')}
+    />
+    <Button
       title="Go to Random Color Generator"
       onPress={() => navigation.navigate('Color')}
     />
@@ -30,7 +34,7 @@ const HomeScreen = ({ navigation }) => {
       title="Go to Control Color Generator"
       onPress={() => navigation.navigate('Color2')}
     />
-        <Button
+    <Button
       title="Go to Control Color Generator - Reducer Version"
       onPress={() => navigation.navigate('Color3')}
     />

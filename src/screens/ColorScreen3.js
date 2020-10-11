@@ -5,15 +5,15 @@ import Square from "../components/Square";
 
 const reducer = (state, action) => {
   // state = { red: 0, green: 0, blue: 0 };
-  // action = { color: 'red' || 'green' || 'blue', value: 10 || -10 }
+  // action = { type: 'set_red' || 'set_green' || 'set_blue', payload: 10 || -10 }
 
-  switch (action.color) {
-    case 'red':
-      return { ...state, red: state.red + action.value };
-    case 'green':
-      return { ...state, green: state.green + action.value };
-    case 'blue':
-      return { ...state, blue: state.blue + action.value };
+  switch (action.type) {
+    case 'set_red':
+      return { ...state, red: state.red + action.payload };
+    case 'set_green':
+      return { ...state, green: state.green + action.payload };
+    case 'set_blue':
+      return { ...state, blue: state.blue + action.payload };
     default:
       return state;
   }
@@ -35,20 +35,20 @@ const ColorScreen2 = () => {
       <ColorCounterReducer
         color="red"
         value={r}
-        onIncrease={() => dispatch({ color: 'red', value: 10 })}
-        onDecrease={() => dispatch({ color: 'red', value: -10 })}
+        onIncrease={() => dispatch({ type: 'set_red', payload: 10 })}
+        onDecrease={() => dispatch({ type: 'set_red', payload: -10 })}
       />
       <ColorCounterReducer
         color="green"
         value={g}
-        onIncrease={() => dispatch({ color: 'green', value: 10 })}
-        onDecrease={() => dispatch({ color: 'green', value: -10 })}
+        onIncrease={() => dispatch({ type: 'set_green', payload: 10 })}
+        onDecrease={() => dispatch({ type: 'set_green', payload: -10 })}
       />
       <ColorCounterReducer
         color="blue"
         value={b}
-        onIncrease={() => dispatch({ color: 'blue', value: 10 })}
-        onDecrease={() => dispatch({ color: 'blue', value: -10 })}
+        onIncrease={() => dispatch({ type: 'set_blue', payload: 10 })}
+        onDecrease={() => dispatch({ type: 'set_blue', payload: -10 })}
       />
 
       <Square color={`rgb(${r}, ${g}, ${b})`} size={80} />
